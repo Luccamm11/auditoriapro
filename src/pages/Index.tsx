@@ -44,7 +44,7 @@ const Index = () => {
           
           <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-6 leading-tight">
             Mostramos exatamente onde sua empresa{" "}
-            <span className="text-primary">perde vendas e dinheiro</span>
+            <span className="text-primary">perde vendas e tempo</span>
           </h1>
           
           <p className="text-lg md:text-xl text-muted-foreground mb-10 max-w-2xl mx-auto">
