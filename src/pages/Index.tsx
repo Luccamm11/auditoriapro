@@ -2,6 +2,20 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { CheckCircle, Clock, FileText, Search, TrendingDown, MessageSquare, ArrowRight } from "lucide-react";
 
+const WHATSAPP_NUMBER = "5534963485835";
+const WHATSAPP_MESSAGE = encodeURIComponent("Olá! Gostaria de saber mais sobre a auditoria comercial.");
+
+const handleWhatsAppClick = () => {
+  window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${WHATSAPP_MESSAGE}`, "_blank");
+};
+
+const scrollToSection = (id: string) => {
+  const element = document.getElementById(id);
+  if (element) {
+    element.scrollIntoView({ behavior: "smooth" });
+  }
+};
+
 const Index = () => {
   return (
     <div className="min-h-screen bg-background">
@@ -14,7 +28,7 @@ const Index = () => {
             </div>
             <span className="text-xl font-semibold text-foreground">Auditoria Pro</span>
           </div>
-          <Button variant="outline" className="border-border hover:bg-secondary">
+          <Button variant="outline" className="border-border hover:bg-secondary" onClick={handleWhatsAppClick}>
             Fale Conosco
           </Button>
         </div>
@@ -38,11 +52,11 @@ const Index = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-6 text-lg">
+            <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-6 text-lg" onClick={handleWhatsAppClick}>
               Solicitar Auditoria
               <ArrowRight className="ml-2 w-5 h-5" />
             </Button>
-            <Button size="lg" variant="outline" className="border-border hover:bg-secondary px-8 py-6 text-lg">
+            <Button size="lg" variant="outline" className="border-border hover:bg-secondary px-8 py-6 text-lg" onClick={() => scrollToSection("como-funciona")}>
               Ver Como Funciona
             </Button>
           </div>
@@ -101,7 +115,7 @@ const Index = () => {
       </section>
 
       {/* How it Works */}
-      <section className="py-20">
+      <section id="como-funciona" className="py-20 scroll-mt-20">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
@@ -203,7 +217,7 @@ const Index = () => {
             <p className="text-muted-foreground mb-8 max-w-xl mx-auto">
               Descubra exatamente onde sua operação comercial está falhando. Relatório completo em até 72 horas.
             </p>
-            <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground px-10 py-6 text-lg">
+            <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground px-10 py-6 text-lg" onClick={handleWhatsAppClick}>
               Solicitar Minha Auditoria
               <ArrowRight className="ml-2 w-5 h-5" />
             </Button>
