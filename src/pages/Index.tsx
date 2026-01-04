@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { CheckCircle, Clock, FileText, Search, TrendingDown, MessageSquare, ArrowRight } from "lucide-react";
 
-const WHATSAPP_NUMBER = "5534963485835";
+const WHATSAPP_NUMBER = "553496348535";
 const WHATSAPP_MESSAGE = encodeURIComponent("Olá! Gostaria de saber mais sobre a auditoria comercial.");
 
 const handleWhatsAppClick = () => {
