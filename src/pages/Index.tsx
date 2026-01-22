@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Helmet } from "react-helmet-async";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import {
@@ -66,6 +67,14 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <Helmet>
+        <title>Audiencify | Diagnóstico Comercial para Empresas que Querem Crescer</title>
+        <meta
+          name="description"
+          content="Descubra onde sua empresa está perdendo vendas sem perceber. Auditoria comercial humana com diagnóstico claro e plano prático em até 72h."
+        />
+        <link rel="canonical" href="https://auditoriapro.vercel.app/" />
+      </Helmet>
       {/* Header */}
       <header className="border-b border-border/50 sticky top-0 bg-background/95 backdrop-blur-sm z-40">
         <div className="container mx-auto px-6 py-4 flex items-center justify-between">
@@ -174,7 +183,7 @@ const Index = () => {
                 </h1>
 
                 <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-xl mx-auto lg:mx-0">
-                  Seu funil pode estar vazando em vários pontos: anúncios, páginas, conversas ou processos. 
+                  Seu funil pode estar vazando em vários pontos: anúncios, páginas, conversas ou processos.
                   Fazemos o raio-X completo e entregamos um plano de ação prático e priorizado.
                 </p>
 
@@ -350,7 +359,7 @@ const Index = () => {
                   <div>
                     <h3 className="text-xl font-semibold text-foreground mb-2">Entendimento e Coleta</h3>
                     <p className="text-muted-foreground">
-                      Você preenche um formulário rápido sobre seu negócio e compartilha os acessos necessários 
+                      Você preenche um formulário rápido sobre seu negócio e compartilha os acessos necessários
                       (anúncios, analytics, CRM, conversas). Tudo confidencial e com termo de sigilo.
                     </p>
                   </div>
@@ -363,7 +372,7 @@ const Index = () => {
                   <div>
                     <h3 className="text-xl font-semibold text-foreground mb-2">Raio-X do Funil</h3>
                     <p className="text-muted-foreground">
-                      Nossa equipe analisa cada etapa: tráfego, criativos, páginas, conversas e processos. 
+                      Nossa equipe analisa cada etapa: tráfego, criativos, páginas, conversas e processos.
                       Usamos checklist proprietário e olhar humano para encontrar vazamentos.
                     </p>
                   </div>
@@ -376,7 +385,7 @@ const Index = () => {
                   <div>
                     <h3 className="text-xl font-semibold text-foreground mb-2">Plano de Ação por Prioridade</h3>
                     <p className="text-muted-foreground">
-                      Você recebe um diagnóstico completo com mapa de vazamentos, quick wins (ações imediatas) 
+                      Você recebe um diagnóstico completo com mapa de vazamentos, quick wins (ações imediatas)
                       e plano de correção priorizado por impacto. Tudo em até 72h.
                     </p>
                   </div>
